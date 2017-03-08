@@ -1,6 +1,7 @@
-# Quer trabalhar em nosso time de frontend? Esse é o nosso desafio para você!
+# Quer trabalhar em nosso time de frontend? 
 
-O objetivo desse desafio é avaliar o conhecimento e as habilidades do candidato frontend nas categorias:
+Esse é o nosso desafio para você!
+O objetivo é avaliar o seu conhecimento e habilidades nos seguintes quesitos:
 
 * Markup
 * Estilização (stylesheet/css)
