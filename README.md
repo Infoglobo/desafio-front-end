@@ -17,7 +17,6 @@ O objetivo desse desafio é avaliar o conhecimento e as habilidades do candidato
 # Setup
 
 * Faça um fork do projeto para a sua conta e clone-o para o seu ambiente de trabalho;
-* Crie um branch com o nome "dev" a partir da "master" para realizar o desafio.
 * Instale as dependências com `npm install`
 * Rode a applicação com `npm start`
 * A aplicação estará acessível através do endereço http://localhost:3000/
@@ -35,7 +34,7 @@ O objetivo desse desafio é avaliar o conhecimento e as habilidades do candidato
 * O(s) arquivo(s) de css devem estar preferencialmente no diretório htdocs/assets/style
 * O(s) arquivo(s) de js devem estar preferencialmente no diretório htdocs/assets/script
 * O(s) arquivo(s) de imagens extraídas do layout, além das figuras já existentes, devem estar preferencialmente no diretório htdocs/assets/media
-* Ao concluir, envie-nos a URL de seu desafio para que possamos avaliar.
+* Ao concluir, publique o resultado em seu repositório e envie-nos a URL de seu desafio para que possamos avaliar.
 
 # O que será avaliado
 
