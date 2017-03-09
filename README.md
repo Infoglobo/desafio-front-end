@@ -18,7 +18,7 @@ O objetivo desse desafio é avaliar o conhecimento e as habilidades do candidato
 
 * Faça um fork do projeto para a sua conta e clone-o para o seu ambiente de trabalho;
 * Instale as dependências com `npm install`
-* Rode a applicação com `npm start`
+* Rode a aplicação com `npm start`
 * A aplicação estará acessível através do endereço http://localhost:3000/
 
 # Instruções
