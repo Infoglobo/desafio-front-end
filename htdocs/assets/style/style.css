@@ -118,6 +118,7 @@ header#topo a.logo img {
 a.link_geralb, a.link_geralp {
 	display:inline-block;
 	text-decoration: none;
+	width: 100%;
 }
 
 a.link_geralb {
