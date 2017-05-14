@@ -1,0 +1,499 @@
+
+/* ==========================================================================
+   Normatização CSS
+   ========================================================================== */
+
+body {
+    font-size: 62.5%;
+    line-height: 1.5;
+    font-family: Arial, sans-serif, "Helvetica Neue", Helvetica;
+    color: #090909;
+	background-color: #e5e5e5;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    color: #00ccff;
+    text-decoration: none;
+    font-size: 1.6em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1  {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #004761;
+	text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.4em;
+    font-weight: 200;
+	margin: 0;
+	padding: 2% 0;
+}
+
+p {
+    font-size: 1.6em;
+}
+
+
+/* ==|== Estilos Principais ================================================== */
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+	background-color: #fff;
+}
+
+img,
+picture,
+video,
+embed {
+    max-width: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    margin-top: 0;
+    margin-bottom: 3.6em;
+	background-color: #004861;
+}
+
+.logo {
+    align: center;
+    width: 35%;  
+	margin: 2% 0 0 25%;
+}
+
+.menu {
+    width: 30px;
+    float: left;
+	height: 28px;
+	margin: 3% 0 0 3%;
+}
+
+.caixa {
+    height: 150px;
+    width: 100%;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+.banner {
+    height: 90px;
+    width: 728px;
+	background-color: #ccc;
+	border: 1px solid #999;
+	margin: 2.8% 15%;
+}
+
+.caixa .banner #advertising{
+	text-transform: uppercase;
+	float: left;
+	font-size: 100%;
+	margin: 1% 0 0 1%;
+	color: #666;
+}
+
+#main, #brasil, #mundo{
+	margin: 2% 0 0 3%;
+}
+
+.container #main .top{ 
+    height: 261px;
+    margin-bottom: 4.8em;
+    position: relative;
+	color: #fff;
+	width: 44.1%;
+	margin-right: 6em;
+	font-size: 90%;
+	padding-right: 0;
+	background-repeat: no-repeat;
+}
+
+.container #main .top a{
+	font-size: 90%;
+	color: #fff;
+}
+
+.container #main .top p.label{
+	color: #fff;
+}
+
+.container #main .top:after {
+    content: url('/assets/media/icone-branco.gif');
+	float: right;
+	margin: 0;
+	padding: 3%;
+}
+
+.container #main .mid{
+	font-size: 80%;
+}
+
+.container #main .mid .foto{
+	width: 40%;
+	float: left;
+	margin-right: 3%;
+}
+
+.container #main .mid .label{
+	margin-top: 2%;
+}
+
+.container #main .mid h2{
+	font-size: 280%;
+}
+
+.container #main .mid .description{
+	padding-bottom: 5%;
+	height: 85px;
+}
+
+#main .top #caixaArtigo{
+	width: 100%;
+    padding: 0 2em;
+    position: absolute;
+    top: 150px;
+}
+
+.coluna {
+    width: 24%; 
+    float: left;
+    padding-right: 2%; 
+	line-height: 215%;
+	margin-bottom: 3%;
+}
+
+.coluna:after {
+    content: url('/assets/media/icone-preto.jpg');
+}
+
+.coluna p{
+	margin: 0;
+	padding: 0;
+}
+
+.coluna a{
+    font-size: 75%;
+	color: #000;
+	text-decoration: none;
+	text-transform: none;
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+}
+
+.coluna .label{
+	text-transform: uppercase;
+	color: #004861;
+	font-size: 120%;
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+}
+
+.container .coluna .description{
+	font-size: 130%;
+	padding-bottom: 5%;
+}
+
+#main .mid .description{
+	font-size: 160%;
+}
+
+.coluna:last-child, .bot:last-child {
+    margin-right: 0;
+}
+
+#main .top{
+   width: 47.5%;
+}
+
+#main .mid{
+   width: 50%;
+}
+
+#brasil .coluna, #mundo .coluna, #main .bot{
+	width: 25%;
+}
+
+.sessionBot{
+	width: 96%;
+	border: 1px solid #ccc;
+	border-right: 0;
+	border-left: 0;
+	clear: both;
+	padding: 1.5% 0;
+}
+
+.sessionBot a{
+	color: #004861;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	float: right;
+	margin: 0;
+	line-height: 0;
+}
+
+#brasilHidden, #mundoHidden{
+	display: none;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 2.4em;
+	height: 80px;
+    clear: both;
+	background-color: #D5E11F;
+}
+
+.logo-footer{
+	float: left;
+	margin: 3% 0 0 6%;
+}
+
+.footer p {
+    margin-bottom: 0;
+	float: right;
+	text-transform: uppercase;
+	font-size: 100%;	
+}
+
+.footer .copyright{
+	float: right;
+	margin-right: 2%;
+	padding-top: 2%;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+
+@media screen and (max-width: 520px) {
+
+	h1{
+		margin-top: 4%;
+	}
+
+	.header{
+		height: 50px;
+		margin-bottom: 0;
+	}
+	
+	#main, #brasil, #mundo {
+		margin: 0;
+	}
+	
+	.menu{
+		width: 22px;
+		height: 21px;
+		margin-top: 4%;		
+	}
+	
+	.logo{
+		margin-top: 16px;
+	}
+	
+	.container .coluna, #main .mid, #brasil .coluna, #mundo .coluna, #main .bot{
+		 width: 100%;
+	}
+
+    .container .coluna {       
+        margin: 0;
+		border-bottom: solid 1px #cecece;
+		clear: both;
+		padding: 4% 3% 0 3%;
+    }
+		
+	.container #main .top{
+		width: 100%;
+		height: unset;
+		margin: 0;
+		padding: 0 0 5% 0;
+		clear: both;			
+	}
+	
+	.container #main .top::after{
+		content: unset;
+	}
+	
+	.container #main .top, .container #main .top a{
+		color: 	#090909;
+	}
+	
+	.container #main .top p.label{
+		color: #004861;
+	}
+	
+	.container #main .top h2{
+		font-size: 300%;
+	}
+	
+	.container #main .top p.label, .container #main .top h2, .container #main .top .description{
+		margin: 0 5%;
+	}
+	
+	.container #main .top .foto{
+		width: 100%;
+	}
+	
+	.container #main .top .foto .imgbox:after{
+		content: url('/assets/media/icone-branco.gif');
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+	
+	.container #main .mid .foto{
+		margin-right: 4%;
+		width: 30%;
+	}
+	
+	.container #main .mid .foto img{
+		width: 100px;
+		height: 100px;		
+	}
+	
+	.container #main .mid .label{
+		margin-top: 0;
+	}
+	
+	.container #main .mid .description{
+		width: 66%;
+		float: right;
+	}
+	
+	#main .mid{
+		margin: 0;
+	}
+	
+	#main .mid:after{ 
+		float: left;
+		margin-left: 23%;
+	}
+	
+	.container #main .mid h2{
+		margin-bottom: 2%;
+		font-size: 310%;
+	}
+	
+	.container #main .mid .description{
+		height: unset;
+	}
+	
+	.container .coluna , .coluna, #main .bot{
+		font-size: 90%;
+		margin-bottom: 0;
+		padding-bottom: 2%;
+	}
+	
+	.coluna h2, #main .bot h2{
+		font-size: 190%;
+		padding: 1% 0;
+		line-height: 90%;
+	}
+	
+	.coluna .foto, #main .bot .foto{
+		width: 45%;
+		float: left;
+		margin-right: 4%;		
+	}
+	
+	.container .coluna .description,#main .bot .description{
+		width: 80%;
+		float: left;
+		font-size: 150%;
+		padding-bottom: 0;
+	}
+	
+	.coluna:after, #main .bot:after{
+		float: right;
+		margin: 0;
+		padding-top: 4%;
+	}
+	
+	.sessionBot{
+		border-top: 0;
+		padding: 5% 0;
+		width: 100%;
+	}
+	
+	.footer{
+		height: unset;
+	}
+	
+	.footer .img, .footer .copyright{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.footer .img{
+		height: 85px;
+		padding: 7% 0 0 24%;
+	} 
+	
+	.footer .copyright{
+		height: 83px;
+		background-color: #004861;
+		color: #fff;
+		float: unset;						
+	} 
+	
+	.footer .copyright p{
+		font-size: 110%;
+		text-align: center;
+		float: unset;
+		margin: 0;
+		padding-top: 7%;
+	}
+	
+	.caixa{
+		height: 100px;
+	}
+	
+	.caixa .banner{
+		width: 100%;
+		height: 100%;
+		border-right: 0;
+		border-left: 0;
+		margin: 0;
+	}
+	
+	.caixa .banner #advertising{
+		padding: 1%;
+	}
+
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; 
+    display: table; 
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
