@@ -109,7 +109,7 @@ embed {
 	color: #666;
 }
 
-#main, #brasil, #mundo{
+#main, .secao{
 	margin: 2% 0 0 3%;
 }
 
@@ -228,7 +228,7 @@ embed {
    width: 50%;
 }
 
-#brasil .coluna, #mundo .coluna, #main .bot{
+.secao .coluna, #main .bot{
 	width: 25%;
 }
 
@@ -251,7 +251,7 @@ embed {
 	line-height: 0;
 }
 
-#brasilHidden, #mundoHidden{
+.hidden{
 	display: none;
 }
 
@@ -298,7 +298,7 @@ embed {
 		margin-bottom: 0;
 	}
 	
-	#main, #brasil, #mundo {
+	#main, .secao {
 		margin: 0;
 	}
 	
@@ -312,7 +312,7 @@ embed {
 		margin-top: 16px;
 	}
 	
-	.container .coluna, #main .mid, #brasil .coluna, #mundo .coluna, #main .bot{
+	.container .coluna, #main .mid, .secao .coluna, #main .bot{
 		 width: 100%;
 	}
 
