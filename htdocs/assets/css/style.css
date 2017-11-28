@@ -8,6 +8,12 @@
 .bg-secondary { 
     background: #004861;
 }
+.color-primary {
+    color: #004861
+}
+.color-secondary {
+    color: #090909;
+}
 
 /* HEADER */
 header {
@@ -24,19 +30,19 @@ header .header-logo {
 }
 
 /* main-news SECTION */
-#main-news {
+.type {
     display: flex;
     margin: 40px 0px;
 }
-#main-news > div {
+.type  {
     display: flex;
     justify-content: space-between;
 }
-#main-news article {
+.type.type-1  article {
     width:100%;
     position: relative;
 }
-#main-news article::after {
+.type.type-1  article::after {
     display: block;
     position: relative;
     background-image: linear-gradient(to bottom, rgba(252, 249, 249, 0) 0, #000 100%);
@@ -44,18 +50,17 @@ header .header-logo {
     height: 150px;
     width: 100%;
     content: '';
-  }
-
-#main-news article:nth-child(even) {
+}
+.type  article:nth-child(even) {
     margin-left: 20px;
 }
-#main-news article:nth-child(odd) {
+.type  article:nth-child(odd) {
     margin-right: 20px;
 }
-#main-news .main-news-image {
+.type.type-1  .main-news-image {
     width: 100%;
 }
-#main-news .main-news-link {
+.type.type-1  .main-news-link {
     position: absolute;
     bottom: 0px;
     padding: 24px;
@@ -65,12 +70,14 @@ header .header-logo {
 .main-news-link h3 {
     text-transform: uppercase;
     font-size: 10px;
+    font-weight: bold
 }
 .main-news-link h1 , .main-news-link h3 {
     margin: 5px 0px;
 }
 .main-news-link h1 {
     font-size: 21px;
+    font-weight: bold;
 }
 .main-news-link h2 {
     font-size: 14px;
@@ -80,4 +87,23 @@ header .header-logo {
     position: absolute;
     top: 24px;
     right: 24px;
+}
+.main-news-type-2 {
+    display: flex;
+}
+
+.main-news-type-2 > div {
+    margin-left: 20px;
+    position: relative;
+}
+.main-news-type-2 .main-news-link {
+    display: inline-block;
+}
+.main-news-type-2 a h1 {
+    font-size: 18px;
+}
+.main-news-type-2 .main-news-share {
+    left: 0px;
+    bottom: 0px;
+    top: auto;
 }
