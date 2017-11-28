@@ -56,6 +56,9 @@
         width: 50%;
         padding: 0px 10px;
     }
+    article.main-news-type-3 > div:nth-child(3){
+        width: 100%;
+    }
     article.main-news-type-3 > div:nth-child(3) span{
         display: inline-block;
     }
@@ -117,5 +120,18 @@
     }
     .footer-resp > div {
         padding: 20px 0px;
+    }
+    .text-right.color-primary.box-more {
+        margin: 10px -25px;
+        border-top: 1px solid #ddd;
+        padding: 10px 35px;
+        border-bottom: 1px solid #ddd;
+    }
+    section {
+        margin: 0; 
+        width: 100%;
+    }
+    section .type-3 {
+        height: 710px;
     }
 }
