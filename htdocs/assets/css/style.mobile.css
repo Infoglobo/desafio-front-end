@@ -1,0 +1,121 @@
+@media (max-width:767px) {
+    .header-logo {
+        width: 200px;
+        height: auto;
+    }
+    .type {
+        margin: 0px -5.5%;
+    }
+    .main-news-type-1, .main-news-type-2 {
+        width: 100%;
+    }
+    .type.type-1 .main-news-link {
+        position: initial;
+        display: block;
+    }
+    .type.type-1 .main-news-link h3{
+        color: #004861;
+    }
+    .type.type-1 .main-news-link h1 , .type.type-1 .main-news-link h2{
+        color: #090909;
+    }
+    .type.type-1  article::after {
+        content: none;
+    }
+    .type-2 {
+        margin: 0 -5.5%;
+        border-top: 1px solid #ddd;
+    }
+    .main-news-type-2 {
+        padding: 20px 5%;
+        border-top: 1px solid #ddd;
+        margin: 0 auto;
+    }
+    .main-news-type-2>div {
+         width: auto;
+    }
+    .main-news-type-2 .main-news-share {
+        position: inherit;
+    }
+
+    article.main-news-type-3 {
+        width: 100%;
+        margin: 0 auto !important;
+        border-top: 1px solid #ddd;
+        padding: 20px 5%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    article.main-news-type-3 > div:nth-child(1){
+        width: 40%;
+    }
+    article.main-news-type-3 > div:nth-child(1) img{
+        margin-bottom: 10px;
+    }
+    article.main-news-type-3 > div:nth-child(2){
+        width: 50%;
+        padding: 0px 10px;
+    }
+    article.main-news-type-3 > div:nth-child(3) span{
+        display: inline-block;
+    }
+    article.main-news-type-3 > div:nth-child(3) span:first-child{
+        width: 90%;
+    }
+    article.main-news-type-3 > div:nth-child(3) span:last-child a{
+        text-align: right;
+        float: right;
+    }
+    .hide-responsive {
+        display: none;
+    }
+    .hide-desk {
+        display: block;
+    }
+    article.main-news-type-3 > div:first-child img{
+        width: 100%;
+    }
+    .share-resp {
+        display: block;
+    }
+    .share-resp img {
+        width: auto !important;
+        float: right;
+        margin-top: 10px;
+    }
+    .type-2-links > .main-news-share {
+        display: none;
+    }
+
+    article.main-news-type-3>img {
+        width: 50%;
+    }
+
+    #advertising {
+        padding: 0px;
+    }
+    #advertising .content {
+        width: 100%;
+ 
+    }
+    .footer-desk {
+        display: none;
+    }
+    footer {
+        margin-top: 0px;
+    }
+    footer .footer-logo {
+        flex: none;
+        margin: 0 auto;
+    }
+    .footer-resp , .footer-resp > div  {
+        margin-top: 0px;
+        display: block;
+        color: white;
+        padding: 0px 0px;
+        text-align: center
+    }
+    .footer-resp > div {
+        padding: 20px 0px;
+    }
+}
