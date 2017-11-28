@@ -1,0 +1,83 @@
+/* GENERAL */
+* {
+    font-family: Arial;
+}
+.bg-primary { 
+    background: #004861;
+}
+.bg-secondary { 
+    background: #004861;
+}
+
+/* HEADER */
+header {
+    padding: 20px 0px;
+}
+.header-container , .header-link-menu {
+    display: flex
+}
+.header-link-menu {
+    align-items: center;
+}
+header .header-logo {
+    margin: 0 auto;
+}
+
+/* main-news SECTION */
+#main-news {
+    display: flex;
+    margin: 40px 0px;
+}
+#main-news > div {
+    display: flex;
+    justify-content: space-between;
+}
+#main-news article {
+    width:100%;
+    position: relative;
+}
+#main-news article::after {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(252, 249, 249, 0) 0, #000 100%);
+    margin-top: -150px;
+    height: 150px;
+    width: 100%;
+    content: '';
+  }
+
+#main-news article:nth-child(even) {
+    margin-left: 20px;
+}
+#main-news article:nth-child(odd) {
+    margin-right: 20px;
+}
+#main-news .main-news-image {
+    width: 100%;
+}
+#main-news .main-news-link {
+    position: absolute;
+    bottom: 0px;
+    padding: 24px;
+    color: white;
+    z-index: 1;
+}
+.main-news-link h3 {
+    text-transform: uppercase;
+    font-size: 10px;
+}
+.main-news-link h1 , .main-news-link h3 {
+    margin: 5px 0px;
+}
+.main-news-link h1 {
+    font-size: 21px;
+}
+.main-news-link h2 {
+    font-size: 14px;
+    line-height: 20px;
+}
+.main-news-share {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
