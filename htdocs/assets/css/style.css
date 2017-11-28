@@ -1,6 +1,12 @@
 /* GENERAL */
 * {
     font-family: Arial;
+    -webkit-transition: all .5s linear 0s;
+    -moz-transition: all .5s linear 0s;
+    transition: all .5s linear 0s;
+}
+a:hover {
+    text-decoration: none;
 }
 .bg-primary { 
     background: #004861;
@@ -8,6 +14,10 @@
 .bg-secondary { 
     background: #004861;
 }
+.bg-footer {
+    background: #d5e11f;
+}
+
 .color-primary {
     color: #004861
 }
@@ -33,6 +43,7 @@ header .header-logo {
 .type {
     display: flex;
     margin: 40px 0px;
+    flex-wrap: wrap;
 }
 .type  {
     display: flex;
@@ -54,13 +65,6 @@ header .header-logo {
 .main-news-type-1 , .main-news-type-2 {
     width: calc(50% - 20px)
 }
-/*
-.type  article:nth-child(even) {
-    margin-left: 20px;
-}
-.type  article:nth-child(odd) {
-    margin-right: 20px;
-}*/
 .type.type-1  .main-news-image {
     width: 100%;
 }
@@ -120,10 +124,64 @@ header .header-logo {
 }
 
 article.main-news-type-3 {
-    margin: 0px !important;
+    margin: 0px 0px 20px 0px !important;
     width: calc(25% - (90px /3));
 }
 
 article.main-news-type-3 > img{
     width: 100%;
+}
+.main-news-type-3 .main-news-share {
+    position: inherit;
+}
+.main-news-type-3 .main-news-share img {
+    margin-top: 10px;
+}
+section .type-3 {
+    overflow: hidden;
+    height: 300px;
+    margin-top: 5px;
+}
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.section-more {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+/* ADVERTISING */
+#advertising {
+    margin: 20px 0px;
+    background: #eee;
+    padding: 30px 0px;
+}
+#advertising .content {
+    border: 1px solid #999;
+    width: 70%;
+    max-width: 728px;
+    height: 90px;
+    background: #ccc;
+    margin: 0 auto;
+    padding: 5px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+/* FOOTERT */
+footer{
+    padding: 20px 0px;
+    font-size: 10px;
+    margin-top: 40px;
+}
+footer > div {
+    display: flex;
+    justify-content: space-between;
+}
+footer .footer-logo {
+    flex: 1;
+    margin: 0px 30px;
 }
