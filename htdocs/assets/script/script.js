@@ -40,8 +40,8 @@ $(document).ready( function () {
                 main_news_template.find('.news-image').attr('src', 'assets/media/'+mainNews.image)
                 main_news_template.find('.news-link').attr('href', mainNews.url)
                 main_news_template.find('.news-category').text(mainNews.label)
-                main_news_template.find('.news-image').text(mainNews.title)
-                main_news_template.find('.news-image').text(mainNews.description)
+                main_news_template.find('.news-title').text(mainNews.title)
+                main_news_template.find('.news-desc').text(mainNews.description)
                 container.append(main_news_template)    
             });
             
