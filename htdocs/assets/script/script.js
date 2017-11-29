@@ -3,12 +3,12 @@ $(document).ready( function () {
     qtd_main_news_evidence = 2
 
     $.ajax({
-        url:'data.json',
+        url:'./data.json',
         complete: function(data) {
             var response = data.responseJSON.section;
-            var main = response.filter( item => item.name == 'main')[0].data;
-            var brasil = response.filter( item => item.name == 'Brasil')[0].data;
-            var mundo = response.filter( item => item.name == 'Mundo')[0].data;
+            var main = response.filter( function(item){return item.name == 'main'})[0].data;
+            var brasil = response.filter( function(item){return item.name == 'Brasil'})[0].data;
+            var mundo = response.filter( function(item){ return item.name == 'Mundo'})[0].data;
 
             
             //Main Session
@@ -24,7 +24,7 @@ $(document).ready( function () {
             container_main_news3.html('')
 
             var qtd_main = 0
-            main.forEach(mainNews => {
+            main.forEach(function(mainNews){
                 //console.log(mainNews)
                 if(qtd_main < qtd_main_news_banner) {
                     var main_news_template = main_news_template1.clone()
@@ -52,7 +52,7 @@ $(document).ready( function () {
             container_brasil_news.html('')
 
             
-            brasil.forEach(brasilNews => {
+            brasil.forEach( function(brasilNews){
                 brasil_news_item_template.find('.news-image').attr('src', 'assets/media/'+brasilNews.image)
                 brasil_news_item_template.find('.news-link').attr('href', brasilNews.url)
                 brasil_news_item_template.find('.news-category').text(brasilNews.label)
@@ -67,7 +67,7 @@ $(document).ready( function () {
             container_mundo_news.html('')
 
             
-            mundo.forEach(mundoNews => {
+            mundo.forEach(function(mundoNews) {
                 mundo_news_item_template.find('.news-image').attr('src', 'assets/media/'+mundoNews.image)
                 mundo_news_item_template.find('.news-link').attr('href', mundoNews.url)
                 mundo_news_item_template.find('.news-category').text(mundoNews.label)
