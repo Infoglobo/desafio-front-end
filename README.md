@@ -1,3 +1,7 @@
+#Obs
+Como na descrição abaixo não mensionava nenhum framework de front-end. A aplicação foi criada usando epenas jquery.
+Pelo mesmo motivo também não foi utilizado nenhum pre-processador de css para o desenvolvimento das folhas de estilos. 
+
 # Quer trabalhar em nosso time de frontend? 
 
 Esse é o nosso desafio para você!

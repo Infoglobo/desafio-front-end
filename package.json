@@ -4,12 +4,21 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node index.js",
+		"start": "node index.js & gulp watch",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"express": "^4.15.2"
+		"express": "^4.15.2",
+		"jquery": "^3.2.1"
+	},
+	"devDependencies": {
+		"gulp": "^3.9.1",
+		"gulp-concat": "^2.6.1",
+		"gulp-minify-css": "^1.2.4",
+		"gulp-uglify": "^3.0.0",
+		"gulp-watch": "^4.3.11",
+		"pump": "^1.0.3"
 	}
 }
