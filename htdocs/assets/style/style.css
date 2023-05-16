@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main-section {
+  background-color: beige;
+}
+
+.part1 {
+  background-color: cadetblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.part2 {
+  background-color: rosybrown;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.part3 {
+  background-color: palegoldenrod;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#brasil-section {
+  background: burlywood;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#mundo-section {
+  background-color: lightpink;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
