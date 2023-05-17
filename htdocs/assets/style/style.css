@@ -9,6 +9,15 @@ body {
   margin-right: auto;
 }
 
+header {
+  background-color: #004861;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
 #main-section {
   background-color: beige;
 }
@@ -17,6 +26,11 @@ body {
   background-color: cadetblue;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.part1-image {
+  border: 2px solid white;
+  margin-left: 20px;
 }
 
 .part2 {
@@ -31,6 +45,12 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.banner {
+  background-color: gainsboro;
+  height: 120px;
+  width: 100%;
+}
+
 #brasil-section {
   background: burlywood;
   display: grid;
@@ -41,5 +61,11 @@ body {
   background-color: lightpink;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+
+footer {
+  background-color: blanchedalmond;
+  height: 120px;
+  width: 100%;
 }
 

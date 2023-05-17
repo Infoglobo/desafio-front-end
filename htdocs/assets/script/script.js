@@ -19,7 +19,7 @@ request.onreadystatechange = () => {
             const part3 = mainSectionData.slice(4, 8);  // Próximos 4 resultados
         
             // Função para criar os elementos HTML
-            const createItemElement = (item) => {
+            const createItemElement = (item, part) => {
                 const itemDiv = document.createElement('div');
                 const titleElement = document.createElement('h2');
                 const descriptionElement = document.createElement('p');
@@ -31,6 +31,15 @@ request.onreadystatechange = () => {
                 descriptionElement.textContent = item.description;
                 imageElement.src = '/assets/media/' + item.image;
                 labelElement.textContent = item.label;
+
+                    // Adicionar uma classe à div de imagem de acordo com a parte
+                if (part === 'part1') {
+                 imageElement.classList.add('part1-image');
+                } else if (part === 'part2') {
+                 imageElement.classList.add('part2-image');
+                } else if (part === 'part3') {
+                 imageElement.classList.add('part3-image');
+                }
         
                 // Adicionar os elementos ao HTML
                 itemDiv.appendChild(imageElement);
@@ -52,17 +61,17 @@ request.onreadystatechange = () => {
         
             // Adicionar as partes aos seus respectivos contêineres
             part1.forEach(item => {
-                const itemDiv = createItemElement(item);
+                const itemDiv = createItemElement(item, 'part1');
                 part1Container.appendChild(itemDiv);
             });
         
             part2.forEach(item => {
-                const itemDiv = createItemElement(item);
+                const itemDiv = createItemElement(item, 'part2');
                 part2Container.appendChild(itemDiv);
             });
         
             part3.forEach(item => {
-                const itemDiv = createItemElement(item);
+                const itemDiv = createItemElement(item, 'part3');
                 part3Container.appendChild(itemDiv);
             });
         
