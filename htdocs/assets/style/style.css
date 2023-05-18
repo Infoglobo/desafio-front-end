@@ -59,9 +59,10 @@ header {
   bottom: 10px;
 }
 
-#info1 img {
+#post > img {
   position: absolute;
-  top: -40px;
+  top: 10px;
+  right: 20px;
 }
 
 .part2 {

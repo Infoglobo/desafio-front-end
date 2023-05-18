@@ -27,7 +27,6 @@ request.onreadystatechange = () => {
                 const descriptionElement = document.createElement('p');
                 const labelElement = document.createElement('p');
                 const imageElement = document.createElement('img');
-                const shareElement = document.createElement('img');
             
                 // Preencher os elementos HTML com os dados do item
                 titleElement.innerHTML = `<a href="${item.url}">${item.title}</a>`;
@@ -36,9 +35,9 @@ request.onreadystatechange = () => {
                 labelElement.textContent = item.label;
             
                 // Adicionar os elementos ao HTML
+                infoDiv.appendChild(labelElement);
                 infoDiv.appendChild(titleElement);
                 infoDiv.appendChild(descriptionElement);
-                infoDiv.appendChild(labelElement);
                 
                 // Adicionar o ID "info" à infoDiv
                 infoDiv.id = `info${number}`;
@@ -71,6 +70,9 @@ request.onreadystatechange = () => {
             // Adicionar as partes aos seus respectivos contêineres
             part1.forEach(item => {
                 const itemDiv = createItemElement(item, 1);
+                const shareElement = document.createElement('img');
+                shareElement.src = '/assets/media/share-icon-white.png';
+                itemDiv.appendChild(shareElement);
                 part1Container.appendChild(itemDiv);
             });
         
