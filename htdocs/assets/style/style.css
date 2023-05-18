@@ -7,6 +7,7 @@ body {
   width: 1024px;
   margin-left: auto;
   margin-right: auto;
+  background-color: white;
 }
 
 header {
@@ -26,7 +27,7 @@ header {
 }
 
 #main-section {
-  background-color: beige;
+  /* background-color: beige; */
 }
 
 .part1{
@@ -34,6 +35,8 @@ header {
   display: flex;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 #post {
@@ -56,9 +59,11 @@ header {
 
 /* bloco de informação de cada post */
 #info1 {
-  position: absolute;
   bottom: 10px;
   color: white;
+  font-family: sans-serif;
+  margin: 10px 20px;
+  position: absolute;
 }
 
 /* posiciona o botão de share com link */
