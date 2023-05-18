@@ -29,7 +29,7 @@ request.onreadystatechange = () => {
                 const imageElement = document.createElement('img');
             
                 // Preencher os elementos HTML com os dados do item
-                titleElement.innerHTML = `<a href="${item.url}">${item.title}</a>`;
+                titleElement.innerHTML = item.title;
                 descriptionElement.textContent = item.description;
                 imageElement.src = '/assets/media/' + item.image;
                 labelElement.textContent = item.label;
@@ -70,9 +70,12 @@ request.onreadystatechange = () => {
             // Adicionar as partes aos seus respectivos contêineres
             part1.forEach(item => {
                 const itemDiv = createItemElement(item, 1);
+                const shareLink = document.createElement('a');
+                shareLink.href = item.url;
                 const shareElement = document.createElement('img');
                 shareElement.src = '/assets/media/share-icon-white.png';
-                itemDiv.appendChild(shareElement);
+                shareLink.appendChild(shareElement);
+                itemDiv.appendChild(shareLink);
                 part1Container.appendChild(itemDiv);
             });
         

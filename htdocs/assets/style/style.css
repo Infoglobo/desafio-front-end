@@ -54,12 +54,15 @@ header {
   background-image: linear-gradient(to bottom, transparent, black);
 }
 
+/* bloco de informação de cada post */
 #info1 {
   position: absolute;
   bottom: 10px;
+  color: white;
 }
 
-#post > img {
+/* posiciona o botão de share com link */
+#post > a {
   position: absolute;
   top: 10px;
   right: 20px;
