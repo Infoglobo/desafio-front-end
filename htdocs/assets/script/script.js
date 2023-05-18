@@ -19,33 +19,42 @@ request.onreadystatechange = () => {
             const part3 = mainSectionData.slice(4, 8);  // Próximos 4 resultados
         
             // Função para criar os elementos HTML
-            const createItemElement = (item, part) => {
+            const createItemElement = (item, number) => {
                 const itemDiv = document.createElement('div');
+                const infoDiv = document.createElement('div');
+                const imgDiv  = document.createElement('div');
                 const titleElement = document.createElement('h2');
                 const descriptionElement = document.createElement('p');
-                const imageElement = document.createElement('img');
                 const labelElement = document.createElement('p');
-        
+                const imageElement = document.createElement('img');
+                const shareElement = document.createElement('img');
+            
                 // Preencher os elementos HTML com os dados do item
                 titleElement.innerHTML = `<a href="${item.url}">${item.title}</a>`;
                 descriptionElement.textContent = item.description;
                 imageElement.src = '/assets/media/' + item.image;
                 labelElement.textContent = item.label;
-
-                    // Adicionar uma classe à div de imagem de acordo com a parte
-                if (part === 'part1') {
-                 imageElement.classList.add('part1-image');
-                } else if (part === 'part2') {
-                 imageElement.classList.add('part2-image');
-                } else if (part === 'part3') {
-                 imageElement.classList.add('part3-image');
-                }
-        
+            
                 // Adicionar os elementos ao HTML
-                itemDiv.appendChild(imageElement);
-                itemDiv.appendChild(labelElement);
-                itemDiv.appendChild(titleElement);
-                itemDiv.appendChild(descriptionElement);
+                infoDiv.appendChild(titleElement);
+                infoDiv.appendChild(descriptionElement);
+                infoDiv.appendChild(labelElement);
+                
+                // Adicionar o ID "info" à infoDiv
+                infoDiv.id = `info${number}`;
+            
+                imgDiv.appendChild(imageElement);
+
+                // Adicionar o ID "img-container" à imgDiv
+                imgDiv.id = `img-container${number}`;
+
+                // Ordem das divs imgDiv e infoDiv
+                itemDiv.appendChild(imgDiv);
+                itemDiv.appendChild(infoDiv);
+                
+                // Adicionar o ID "post" ao itemDiv
+                itemDiv.id = "post";
+            
                 return itemDiv;
             };
         
@@ -61,17 +70,17 @@ request.onreadystatechange = () => {
         
             // Adicionar as partes aos seus respectivos contêineres
             part1.forEach(item => {
-                const itemDiv = createItemElement(item, 'part1');
+                const itemDiv = createItemElement(item, 1);
                 part1Container.appendChild(itemDiv);
             });
         
             part2.forEach(item => {
-                const itemDiv = createItemElement(item, 'part2');
+                const itemDiv = createItemElement(item, 2);
                 part2Container.appendChild(itemDiv);
             });
         
             part3.forEach(item => {
-                const itemDiv = createItemElement(item, 'part3');
+                const itemDiv = createItemElement(item, 3);
                 part3Container.appendChild(itemDiv);
             });
         

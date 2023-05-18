@@ -16,21 +16,52 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 } 
+
+#menu {
+  position: absolute;
+  top: 30%;
+  left: 2%;
+}
 
 #main-section {
   background-color: beige;
 }
 
-.part1 {
+.part1{
   background-color: cadetblue;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
-.part1-image {
-  border: 2px solid white;
-  margin-left: 20px;
+#post {
+  position:relative;
+}
+
+#img-container1 {
+  position: relative;
+}
+
+#img-container1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, transparent, black);
+}
+
+#info1 {
+  position: absolute;
+  bottom: 10px;
+}
+
+#info1 img {
+  position: absolute;
+  top: -40px;
 }
 
 .part2 {
@@ -67,5 +98,14 @@ footer {
   background-color: blanchedalmond;
   height: 120px;
   width: 100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+footer img {
+  width: 166px;
+  height: 21px;
+
 }
 
