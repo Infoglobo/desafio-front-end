@@ -13,7 +13,7 @@ request.onreadystatechange = () => {
             const mainSectionData = section.data;
             const mainSectionContainer = document.getElementById('main-section');
         
-            // Dividir a main section em três partes
+            // Divide a main section em três partes
             const part1 = mainSectionData.slice(0, 2);  // Primeiros 2 resultados
             const part2 = mainSectionData.slice(2, 4);  // Próximos 2 resultados
             const part3 = mainSectionData.slice(4, 8);  // Próximos 4 resultados
@@ -28,30 +28,30 @@ request.onreadystatechange = () => {
                 const labelElement = document.createElement('p');
                 const imageElement = document.createElement('img');
             
-                // Preencher os elementos HTML com os dados do item
+                // Preenche os elementos HTML com os dados do item
                 titleElement.innerHTML = item.title;
                 descriptionElement.textContent = item.description;
                 imageElement.src = '/assets/media/' + item.image;
                 labelElement.textContent = item.label;
             
-                // Adicionar os elementos ao HTML
+                // Adiciona os elementos ao HTML
                 infoDiv.appendChild(labelElement);
                 infoDiv.appendChild(titleElement);
                 infoDiv.appendChild(descriptionElement);
                 
-                // Adicionar o ID "info" à infoDiv
+                // Adiciona o ID "info" à infoDiv
                 infoDiv.className= `info${number}`;
             
                 imgDiv.appendChild(imageElement);
 
-                // Adicionar o ID "img-container" à imgDiv
+                // Adiciona o ID "img-container" à imgDiv
                 imgDiv.className = `img-container${number}`;
 
                 // Ordem das divs imgDiv e infoDiv
                 itemDiv.appendChild(imgDiv);
                 itemDiv.appendChild(infoDiv);
                 
-                // Adicionar o ID "post" ao itemDiv
+                // Adiciona o ID "post" ao itemDiv
                 itemDiv.className = `post${number}`;
             
                 return itemDiv;
@@ -59,17 +59,15 @@ request.onreadystatechange = () => {
         
             // Criar as <div>s para cada parte
             const part1Container = document.createElement('div');
-            const line = document.createElement('div');
             const part2Container = document.createElement('div');
             const part3Container = document.createElement('div');
         
             // Adicionar as classes CSS para cada <div>
             part1Container.classList.add('part1');
-            line.classList.add('line');
             part2Container.classList.add('part2');
             part3Container.classList.add('part3');
         
-            // Adicionar as partes aos seus respectivos contêineres
+            // Adicionar os elementos na section 1
             part1.forEach(item => {
                 const itemDiv = createItemElement(item, 1);
                 const shareLink = document.createElement('a');
@@ -78,10 +76,12 @@ request.onreadystatechange = () => {
                 shareElement.src = '/assets/media/share-icon-white.png';
                 shareLink.appendChild(shareElement);
                 itemDiv.appendChild(shareLink);
+
                 part1Container.appendChild(itemDiv);
-            });
-        
-            part2.forEach(item => {
+              });
+              
+            // Adicionar os elementos na section 2
+              part2.forEach(item => {
                 const itemDiv = createItemElement(item, 2);
                 const shareLink = document.createElement('a');
                 shareLink.href = item.url;
@@ -89,9 +89,11 @@ request.onreadystatechange = () => {
                 shareElement.src = '/assets/media/share-icon-black.png';
                 shareLink.appendChild(shareElement);
                 itemDiv.appendChild(shareLink);
+
                 part2Container.appendChild(itemDiv);
             });
         
+            // Adicionar os elementos na section 3
             part3.forEach(item => {
                 const itemDiv = createItemElement(item, 3);
                 const shareLink = document.createElement('a');
@@ -103,7 +105,7 @@ request.onreadystatechange = () => {
                 part3Container.appendChild(itemDiv);
             });
         
-            // Adicionar os contêineres ao contêiner principal
+            // Adiciona o container ao container principal
             mainSectionContainer.appendChild(part1Container);
             mainSectionContainer.appendChild(part2Container);
             mainSectionContainer.appendChild(part3Container);
@@ -113,7 +115,7 @@ request.onreadystatechange = () => {
             const brasilSectionContainer = document.getElementById('brasil-section');
 
             brasilSectionData.forEach(item => {
-                // Criar elementos HTML para exibir as informações do item
+                // Cria elementos HTML para exibir as informações do item recebido
                 const itemDiv = document.createElement('div');
                 const titleElement = document.createElement('h2');
                 const descriptionElement = document.createElement('p');
@@ -122,7 +124,7 @@ request.onreadystatechange = () => {
                 const shareLink = document.createElement('a');
                 const shareElement = document.createElement('img');
 
-                // Preencher os elementos HTML com os dados do item
+                // Preenche os elementos HTML com os dados do item recebido
                 titleElement.innerHTML = item.title;
                 descriptionElement.textContent = item.description;
                 imageElement.src = '/assets/media/' + item.image;
@@ -130,7 +132,7 @@ request.onreadystatechange = () => {
                 shareLink.href = item.url;
                 shareElement.src = '/assets/media/share-icon-black.png';
 
-                // Adicionar os elementos ao HTML
+                // Adiciona os elementos ao HTML
                 itemDiv.appendChild(imageElement);
                 itemDiv.appendChild(labelElement);
                 itemDiv.appendChild(titleElement);
@@ -146,7 +148,7 @@ request.onreadystatechange = () => {
             const mundoSectionContainer = document.getElementById('mundo-section');
 
             mundoSectionData.forEach(item => {
-                // Criar elementos HTML para exibir as informações do item
+                // Cria elementos HTML para exibir as informações do item recebido
                 const itemDiv = document.createElement('div');
                 const titleElement = document.createElement('h2');
                 const descriptionElement = document.createElement('p');
@@ -155,8 +157,8 @@ request.onreadystatechange = () => {
                 const shareLink = document.createElement('a');
                 const shareElement = document.createElement('img');
 
-                // Preencher os elementos HTML com os dados do item
-                titleElement.innerHTML = `<a href="${item.url}">${item.title}</a>`;
+                // Preenche os elementos HTML com os dados do item recebido
+                titleElement.innerHTML = item.title;
                 descriptionElement.textContent = item.description;
                 imageElement.src = '/assets/media/' + item.image;
                 labelElement.textContent = item.label;

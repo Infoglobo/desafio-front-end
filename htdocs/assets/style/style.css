@@ -4,56 +4,58 @@
 }
 
 body {
-  width: 1024px;
+  background-color: white;
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
+  width: 1024px;
 }
 
 header {
-  background-color: #004861;
-  height: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background-color: #004861;
+  display: flex;
+  height: 100px;
+  justify-content: center;
   position: relative;
+  width: 100%;
 } 
 
 h2 {
-  font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
+
+/* Posiciona o menu no cabeçalho */
 
 #menu {
   position: absolute;
-  top: 40%;
   left: 2%;
+  top: 40%;
 }
 
 #main-section {
-  margin-right: 30px;
   margin-left: 30px;
+  margin-right: 30px;
 }
 
+/* Área 1 de publicação da section principal */
+
 .part1{
-  /* background-color: cadetblue; */
   display: flex;
-  justify-content:space-between;
-  /* gap: 30px; */
+  justify-content: space-between;
   margin-bottom: 30px;
   margin-top: 30px;
 }
 
 .post1 {
-  position:relative;
+  position: relative;
 }
 
 /* posiciona o botão de share com link */
 .post1 > a {
   position: absolute;
-  top: 10px;
   right: 20px;
+  top: 10px;
 }
 
 .img-container1 {
@@ -61,16 +63,17 @@ h2 {
 }
 
 .img-container1::before {
+  background-image: linear-gradient(to bottom, transparent, black);
   content: "";
+  height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom, transparent, black);
 }
 
 /* bloco de informação de cada post */
+
 .info1 {
   bottom: 10px;
   color: white;
@@ -81,9 +84,9 @@ h2 {
 
 .info1 > p:first-child {
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
   font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .info1 > p:nth-child(3) {
@@ -91,11 +94,12 @@ h2 {
   font-size: 14px;
 }
 
+/* Área 2 de publicação da section principal */
+
 .part2 {
-  /* background-color: rosybrown; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 40px;
+  grid-template-columns: 1fr 1fr;
   margin-bottom: 30px;
   margin-top: 30px;
 }
@@ -108,9 +112,9 @@ h2 {
 }
 
 .post2 > a {
-  position: absolute;
   bottom: 0px;
   left: 235px;
+  position: absolute;
 }
 
 #img-container2 {
@@ -118,20 +122,18 @@ h2 {
 }
 
 .info2 {
-  /* bottom: 10px; */
   color: black;
   font-family: sans-serif;
   margin-left: 20px;
   margin-right: -100px;
   margin-top: 10px;
-  /* position: absolute; */
   width: 220px;
 }
 
 .info2 > p:first-child {
-  font-weight: bold;
-  text-transform: uppercase;
   font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .info2 > h2:nth-child(2) {
@@ -144,11 +146,12 @@ h2 {
   font-size: 14px;
 }
 
+/* Área 3 de publicação da section principal */
+
 .part3 {
-  /* background-color: palegoldenrod; */
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 33px;
+  grid-template-columns: repeat(4, 1fr);
   margin-bottom: 30px;
   margin-top: 30px;
 }
@@ -158,16 +161,16 @@ h2 {
 }
 
 .post3 > a {
-  position: absolute;
   bottom: -40px;
   left: 0px;
+  position: absolute;
 }
 
 .info3 > p:first-child {
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
   font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .info3 > h2:nth-child(2) {
@@ -180,59 +183,62 @@ h2 {
   font-size: 14px;
 }
 
+/* Configura e exibe a área de banner */
+
 #banner {
+  align-content: center;
   background-color: gainsboro;
+  display: flex;
   height: 120px;
-  width: 100%;
+  justify-content: center;
   margin-bottom: 30px;
   margin-top: 60px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  width: 100%;
 }
 
 #banner > #ad {
   border: 1px solid rgb(132, 131, 131);
-  width: 100%;
   margin: 20px 120px;
+  width: 100%;
 }
 
 #banner > #ad > p {
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  margin: 5px;
-  font-size: 12px;
   color: rgb(132, 131, 131);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin: 5px;
+  text-transform: uppercase;
 }
 
 #banner > #ad > p::before {
+  color: rgb(132, 131, 131);
   content:'Advertising 728x90';
   font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  margin: 5px;
   font-size: 12px;
-  color: rgb(132, 131, 131);
+  margin: 5px;
+  text-transform: uppercase;
 }
 
+/* Área de publicação da section Brasil */
+
 #brasil-section {
-  /* background: burlywood; */
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 33px;
+  grid-template-columns: repeat(4, 1fr);
   margin-bottom: 30px;
+  margin-left: 30px;
   margin-top: 30px;
   margin-right: 30px;
-  margin-left: 30px;
   position: relative;
 }
 
 #brasil-section > p:first-child {
+  color: #004861;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
   position: absolute;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #004861;
 }
 
 .post-brasil {
@@ -241,9 +247,9 @@ h2 {
 
 .post-brasil > p:nth-child(2) {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 12px;
 }
 
 .post-brasil > h2:nth-child(3) {
@@ -257,29 +263,30 @@ h2 {
 }
 
 .post-brasil > a:nth-child(5) {
-  position: absolute;
   bottom: -40px;
+  position: absolute;
 }
 
+/* Área de publicação da section Mundo */
+
 #mundo-section {
-  /* background-color: lightpink; */
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 33px;
+  grid-template-columns: repeat(4, 1fr);
   margin-bottom: 30px;
+  margin-left: 30px;
   margin-top: 30px;
   margin-right: 30px;
-  margin-left: 30px;
   position: relative;
 }
 
 #mundo-section > p:first-child {
-  position: absolute;
-  text-transform: uppercase;
-  font-weight: bold;
+  color: #004861;
   font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #004861;
+  font-weight: bold;
+  position: absolute;
+  text-transform: uppercase;
 }
 
 .post-mundo {
@@ -288,9 +295,9 @@ h2 {
 
 .post-mundo > p:nth-child(2) {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 12px;
 }
 
 .post-mundo > h2:nth-child(3) {
@@ -304,60 +311,64 @@ h2 {
 }
 
 .post-mundo > a:nth-child(5) {
-  position: absolute;
   bottom: -40px;
+  position: absolute;
 }
 
+/* Configura a separação das sections Brasil e Mundo */
+
 .break-section {
-  border-top: 2px solid #e0e0e0;
   border-bottom: 2px solid #e0e0e0;
-  margin-right: 30px;
-  margin-left: 30px;
+  border-top: 2px solid #e0e0e0;
   margin-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
   margin-top: 60px;
 }
 
 .break-section > h3 {
-  text-align: right;
-  text-transform: uppercase;
+  color: #004861;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  margin-top: 5px;
+  text-align: right;
   margin-bottom: 5px;
-  color: #004861;
+  margin-top: 5px;
+  text-transform: uppercase;
 }
 
+/* Exibe e configura o rodapé do site */
+
 #footer-1 {
+  align-items: center;
   background-color: #d5e11f;
   display: block;
-  height: 100px;
-  width: 100%;
   display: flex;
+  height: 100px;
   justify-content:space-between;
-  align-items: center;
+  width: 100%;
 }
 
 #footer-1 > img {
-  width: 166px;
   height: 21px;
   margin-left: 40px;
+  width: 166px;
 }
 
 #footer-1 > p {
   font-family: sans-serif;
-  text-align: right;
   margin-right: 40px;
+  text-align: right;
 }
 
 #footer-2 {
+  align-items: center;
   background-color: #004861;
   display: block;
-  height: 100px;
-  width: 100%;
   display: flex;
-  justify-content:center;
-  align-items: center;
   display: none;
+  height: 100px;
+  justify-content:center;
+  width: 100%;
 }
 
 #footer-2 > p {
@@ -366,27 +377,26 @@ h2 {
   text-align: center;
 }
 
-
+/* Configurações para Mobile */
 
 @media only screen and (max-width: 600px) {
   body {
     width: 600px;
-    /* margin-left: auto;
-    margin-right: auto; */
-    /* background-color: pink; */
   }
 
   h2 {
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
     color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
   }
 
   #main-section {
-    margin-right: 0;
     margin-left: 0;
+    margin-right: 0;
     margin-top: -30px;
   }
+
+  /* Área 1 de publicações principais */
 
   .part1{
     display: flex;
@@ -398,67 +408,71 @@ h2 {
 
   .post1 {
     height: 600px;
+    margin-bottom: -20px;
   }
 
   .info1 > p:first-child {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 22px;
     color: #004861;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 
   .info1 > p:nth-child(3) {
+    color:black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 26px;
-    color:black;
   }
 
   .img-container1 > img {
     width: 600px;
   }
 
+  /* Área 2 de publicações principais */
+
   .part2 {
-    /* background-color: rosybrown; */
     display: grid;
-    grid-template-columns: 1fr;
     gap: 0;
+    grid-template-columns: 1fr;
     margin-bottom: 30px;
     margin-top: 30px;
   }
 
   .post2 {
+    border-top: 2px solid #e0e0e0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-between;
+    margin-bottom: 50px;
+    padding-top: 30px;
     position: relative;
-    margin: 30px;
-    /* border-top: 2px solid #e0e0e0; */
-    padding-top: 50px;
   }
 
   .post2 > a {
-    position: absolute;
     bottom: -27px;
-    left: 151px;
+    left: 185px;
+    position: absolute;
   }
 
   .img-container2 > img {
-    margin-left: 0;
+    margin-left: 30px;
     width: 175px;
+
   }
 
   .info2 {
     color: black;
     margin-left: 30px;
+    margin-right: 30px;
     width: 353px;
   }
 
   .info2 > p:first-child {
     color: #004861;
+    font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 18px;
   }
   
   .info2 > h2:nth-child(2) {
@@ -471,29 +485,31 @@ h2 {
     font-size: 20px;
   }
 
+  /* Área 3 de publicações principais */
+
   .part3 {
     display: grid;
+    gap: 0;
     grid-template-columns: 1fr;
-    gap: 33px;
-    margin: 30px;
   }
 
   .post3 {
-    position: relative;
+    border-top: 2px solid #e0e0e0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 100px;
-    border-top: 2px solid #e0e0e0;
-    padding-top: 50px;
+    padding-top: 30px;
+    position: relative;
   }
   
   .post3 > a {
-    position: absolute;
     bottom: -75px;
     left: 506px;
+    position: absolute;
   }
 
   .img-container3 {
+    margin-left: 30px;
     width: 216px;
   }
 
@@ -502,15 +518,16 @@ h2 {
   }
 
   .info3 {
+    margin-right: 30px;
     position: relative;
   }
 
   .info3 > p:first-child {
     color: #004861;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
     font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
   }
   
   .info3 > h2:nth-child(2) {
@@ -519,179 +536,242 @@ h2 {
   }
   
   .info3 > p:nth-child(3) {
+    bottom: -56px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    position: absolute;
-    bottom: -56px;
     left: -268px;
+    position: absolute;
     width: 400px;
+  }
+
+  /* Exibe e configura a área de banner para a versão Mobile */
+
+  #banner {
+    align-content: center;
+    background-color: gainsboro;
+    display: flex;
+    height: 147px;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: -28px;
+    width: 100%;
   }
 
   #banner > #ad {
     border: 1px solid rgb(132, 131, 131);
-    width: 100%;
     margin: 0;
+    width: 100%;
   }
   
   #banner > #ad > p {
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    margin: 5px;
-    font-size: 12px;
     color: rgb(132, 131, 131);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 5px;
+    text-transform: uppercase;
   }
 
   #banner > #ad > p::before {
+    color: rgb(132, 131, 131);
     content:'Advertising 320x100';
     font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    margin: 5px;
     font-size: 12px;
-    color: rgb(132, 131, 131);
+    margin: 5px;
+    text-transform: uppercase;
   }
 
+  /* Área de publicação da section Brasil */
+
   #brasil-section {
-    /* background: burlywood; */
     display: grid;
+    gap: 0;
     grid-template-columns: 1fr;
-    gap: 33px;
     margin-bottom: 30px;
     margin-top: 30px;
-    margin-right: 30px;
-    margin-left: 30px;
     position: relative;
   }
   
   #brasil-section > p:first-child {
+    color: #004861;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
     position: absolute;
     text-transform: uppercase;
-    font-weight: bold;
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #004861;
+    top: -12px;
   }
 
   .post-brasil {
-    /* margin-top: 30px; */
+    border-bottom: 2px solid #e0e0e0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 100px;
+    margin-left: -30px;
+    margin-right: -35px;
+    padding-bottom: 80px;
+    padding-top: -6px;
     position: relative;
+  }
+
+  .post-brasil > img {
+    margin-left: 30px;
+    width: 260px;
   }
   
   .post-brasil > p:nth-child(2) {
     color: #004861;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
     font-size: 18px;
+    font-weight: bold;
+    left: 311px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0px;
   }
   
   .post-brasil > h2:nth-child(3) {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 27px;
+    left: 311px;
     position: absolute;
-    top: 21px;
-    left: 270px;
+    top: 26px;
+    width: 278px;
   }
   
   .post-brasil > p:nth-child(4) {
+    bottom: 22px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    left: 28px;
     position: absolute;
-    bottom: -60px;
-    left: 2px;
     width: 400px;
   }
   
   .post-brasil > a:nth-child(5) {
-    position: absolute;
-    bottom: -75px;
+    bottom: 40px;
     left: 506px;
+    position: absolute;
   }
 
+  /* Área de publicação da section Mundo */
+
   #mundo-section {
-    /* background: burlywood; */
     display: grid;
-    grid-template-columns: 1fr;
     gap: 33px;
+    grid-template-columns: 1fr;
     margin-bottom: 30px;
-    margin-top: 30px;
-    margin-right: 30px;
     margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
     position: relative;
   }
   
   #mundo-section > p:first-child {
+    color: #004861;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
     position: absolute;
     text-transform: uppercase;
-    font-weight: bold;
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #004861;
+    top: -12px;
   }
 
   .post-mundo {
-    /* margin-top: 30px; */
+    border-bottom: 2px solid #e0e0e0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 100px;
+    margin-left: -30px;
+    margin-right: -27px;
+    padding-bottom: 80px;
+    padding-top: -41px;
     position: relative;
+  }
+
+  .post-mundo > img:first-child {
+    margin-left: 30px;
+    width: 260px;
   }
   
   .post-mundo > p:nth-child(2) {
     color: #004861;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
     font-size: 18px;
+    font-weight: bold;
+    left: 311px;
+    position: absolute;
+    text-transform: uppercase;
+    top: -1px;
   }
   
   .post-mundo > h2:nth-child(3) {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 27px;
+    left: 311px;
     position: absolute;
-    top: 21px;
-    left: 270px;
+    top: 22px;
+    width: 235px;
   }
   
   .post-mundo > p:nth-child(4) {
+    bottom: 22px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    left: 28px;
     position: absolute;
-    bottom: -60px;
-    left: 2px;
     width: 400px;
   }
   
   .post-mundo > a:nth-child(5) {
-    position: absolute;
-    bottom: -75px;
+    bottom: 40px;
     left: 506px;
+    position: absolute;
   }
 
+  .break-section {
+    border-bottom: 2px solid #e0e0e0;
+    border-top: 2px solid #e0e0e0;
+    margin-bottom: -1px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -32px;
+  }
+
+  .break-section > h3 {
+    color: #004861;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    margin-top: 5px;
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+  /* Posiciona e alinha os elementos do rodapé */
+
   #footer-1 > img {
-    width: 166px;
     height: 21px;
     margin-left: auto;
     margin-right: auto;
+    width: 166px;
   }
   
   #footer-1 > p {
-    font-family: sans-serif;
-    text-align: right;
-    margin-right: 40px;
     display: none;
+    font-family: sans-serif;
+    margin-right: 40px;
+    text-align: right;
   }
   
+  /* Posiciona os elementos e ativa o rodapé secundário */
+
   #footer-2 {
+    align-items: center;
     background-color: #004861;
     display: block;
-    height: 100px;
-    width: 100%;
     display: flex;
+    height: 100px;
     justify-content:center;
-    align-items: center;
+    width: 100%;
   }
   
   #footer-2 > p {
@@ -699,6 +779,5 @@ h2 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
   }
-
 }
 
