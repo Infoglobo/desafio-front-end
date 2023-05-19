@@ -12,7 +12,7 @@ body {
 
 header {
   background-color: #004861;
-  height: 120px;
+  height: 100px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -20,34 +20,47 @@ header {
   position: relative;
 } 
 
+h2 {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 #menu {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 2%;
 }
 
 #main-section {
-  /* background-color: beige; */
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
 .part1{
-  background-color: cadetblue;
+  /* background-color: cadetblue; */
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  justify-content:space-between;
+  /* gap: 30px; */
   margin-bottom: 30px;
   margin-top: 30px;
 }
 
-#post {
+.post1 {
   position:relative;
 }
 
-#img-container1 {
+/* posiciona o botão de share com link */
+.post1 > a {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.img-container1 {
   position: relative;
 }
 
-#img-container1::before {
+.img-container1::before {
   content: "";
   position: absolute;
   top: 0;
@@ -58,7 +71,7 @@ header {
 }
 
 /* bloco de informação de cada post */
-#info1 {
+.info1 {
   bottom: 10px;
   color: white;
   font-family: sans-serif;
@@ -66,46 +79,257 @@ header {
   position: absolute;
 }
 
-/* posiciona o botão de share com link */
-#post > a {
-  position: absolute;
-  top: 10px;
-  right: 20px;
+.info1 > p:first-child {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.info1 > p:nth-child(3) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 .part2 {
-  background-color: rosybrown;
+  /* background-color: rosybrown; */
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.post2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  position: relative;
+}
+
+.post2 > a {
+  position: absolute;
+  bottom: 0px;
+  left: 235px;
+}
+
+#img-container2 {
+  margin-left: 35px;
+}
+
+.info2 {
+  /* bottom: 10px; */
+  color: black;
+  font-family: sans-serif;
+  margin-left: 20px;
+  margin-right: -100px;
+  margin-top: 10px;
+  /* position: absolute; */
+  width: 220px;
+}
+
+.info2 > p:first-child {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.info2 > h2:nth-child(2) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.info2 > p:nth-child(3) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 .part3 {
-  background-color: palegoldenrod;
+  /* background-color: palegoldenrod; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 33px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
-.banner {
+.post3 {
+  position: relative;
+}
+
+.post3 > a {
+  position: absolute;
+  bottom: -40px;
+  left: 0px;
+}
+
+.info3 > p:first-child {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.info3 > h2:nth-child(2) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.info3 > p:nth-child(3) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+#banner {
   background-color: gainsboro;
   height: 120px;
   width: 100%;
+  margin-bottom: 30px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#banner > #ad {
+  border: 1px solid rgb(132, 131, 131);
+  width: 100%;
+  margin: 20px 120px;
+}
+
+#banner > #ad > p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  margin: 5px;
+  font-size: 12px;
+  color: rgb(132, 131, 131);
+}
+
+#banner > #ad > p::before {
+  content:'Advertising 728x90';
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  margin: 5px;
+  font-size: 12px;
+  color: rgb(132, 131, 131);
 }
 
 #brasil-section {
-  background: burlywood;
+  /* background: burlywood; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 33px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+  position: relative;
+}
+
+#brasil-section > p:first-child {
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #004861;
+}
+
+.post-brasil {
+  margin-top: 30px;
+}
+
+.post-brasil > p:nth-child(2) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.post-brasil > h2:nth-child(3) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.post-brasil > p:nth-child(4) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.post-brasil > a:nth-child(5) {
+  position: absolute;
+  bottom: -40px;
 }
 
 #mundo-section {
-  background-color: lightpink;
+  /* background-color: lightpink; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 33px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+  position: relative;
+}
+
+#mundo-section > p:first-child {
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #004861;
+}
+
+.post-mundo {
+  margin-top: 30px;
+}
+
+.post-mundo > p:nth-child(2) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.post-mundo > h2:nth-child(3) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.post-mundo > p:nth-child(4) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.post-mundo > a:nth-child(5) {
+  position: absolute;
+  bottom: -40px;
+}
+
+.break-section {
+  border-top: 2px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
+
+.break-section > h3 {
+  text-align: right;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #004861;
 }
 
 footer {
-  background-color: blanchedalmond;
-  height: 120px;
+  background-color: #d5e11f;
+  height: 100px;
   width: 100%;
   display: flex;
   justify-content:space-between;
@@ -115,6 +339,316 @@ footer {
 footer img {
   width: 166px;
   height: 21px;
+  margin-left: 40px;
+}
+
+footer p {
+  font-family: sans-serif;
+  text-align: right;
+  margin-right: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 600px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* background-color: pink; */
+  }
+
+  h2 {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+  }
+
+  #main-section {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: -30px;
+  }
+
+  .part1{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .post1 {
+    height: 600px;
+  }
+
+  .info1 > p:first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #004861;
+  }
+
+  .info1 > p:nth-child(3) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color:black;
+  }
+
+  .img-container1 > img {
+    width: 600px;
+  }
+
+  .part2 {
+    /* background-color: rosybrown; */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .post2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    position: relative;
+    margin: 30px;
+    border-top: 2px solid #e0e0e0;
+    padding-top: 50px;
+  }
+
+  .post2 > a {
+    position: absolute;
+    bottom: -27px;
+    left: 151px;
+  }
+
+  .img-container2 > img {
+    margin-left: 0;
+    width: 175px;
+  }
+
+  .info2 {
+    color: black;
+    margin-left: 30px;
+    width: 353px;
+  }
+
+  .info2 > p:first-child {
+    color: #004861;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  
+  .info2 > h2:nth-child(2) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+  }
+  
+  .info2 > p:nth-child(3) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+
+  .part3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 33px;
+    margin: 30px;
+  }
+
+  .post3 {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
+    border-top: 2px solid #e0e0e0;
+    padding-top: 50px;
+  }
+  
+  .post3 > a {
+    position: absolute;
+    bottom: -75px;
+    left: 506px;
+  }
+
+  .img-container3 {
+    width: 216px;
+  }
+
+  .img-container3 > img {
+    width: 260px;
+  }
+
+  .info3 {
+    position: relative;
+  }
+
+  .info3 > p:first-child {
+    color: #004861;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  
+  .info3 > h2:nth-child(2) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+  }
+  
+  .info3 > p:nth-child(3) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    bottom: -56px;
+    left: -268px;
+    width: 400px;
+  }
+
+  #banner > #ad {
+    border: 1px solid rgb(132, 131, 131);
+    width: 100%;
+    margin: 0;
+  }
+  
+  #banner > #ad > p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin: 5px;
+    font-size: 12px;
+    color: rgb(132, 131, 131);
+  }
+
+  #banner > #ad > p::before {
+    content:'Advertising 320x100';
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin: 5px;
+    font-size: 12px;
+    color: rgb(132, 131, 131);
+  }
+
+  #brasil-section {
+    /* background: burlywood; */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 33px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+    position: relative;
+  }
+  
+  #brasil-section > p:first-child {
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #004861;
+  }
+
+  .post-brasil {
+    /* margin-top: 30px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
+    position: relative;
+  }
+  
+  .post-brasil > p:nth-child(2) {
+    color: #004861;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  
+  .post-brasil > h2:nth-child(3) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: 21px;
+    left: 270px;
+  }
+  
+  .post-brasil > p:nth-child(4) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    bottom: -60px;
+    left: 2px;
+    width: 400px;
+  }
+  
+  .post-brasil > a:nth-child(5) {
+    position: absolute;
+    bottom: -75px;
+    left: 506px;
+  }
+
+  #mundo-section {
+    /* background: burlywood; */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 33px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+    position: relative;
+  }
+  
+  #mundo-section > p:first-child {
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #004861;
+  }
+
+  .post-mundo {
+    /* margin-top: 30px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
+    position: relative;
+  }
+  
+  .post-mundo > p:nth-child(2) {
+    color: #004861;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  
+  .post-mundo > h2:nth-child(3) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: 21px;
+    left: 270px;
+  }
+  
+  .post-mundo > p:nth-child(4) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    bottom: -60px;
+    left: 2px;
+    width: 400px;
+  }
+  
+  .post-mundo > a:nth-child(5) {
+    position: absolute;
+    bottom: -75px;
+    left: 506px;
+  }
 
 }
 

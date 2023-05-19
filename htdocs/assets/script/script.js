@@ -40,19 +40,19 @@ request.onreadystatechange = () => {
                 infoDiv.appendChild(descriptionElement);
                 
                 // Adicionar o ID "info" à infoDiv
-                infoDiv.id = `info${number}`;
+                infoDiv.className= `info${number}`;
             
                 imgDiv.appendChild(imageElement);
 
                 // Adicionar o ID "img-container" à imgDiv
-                imgDiv.id = `img-container${number}`;
+                imgDiv.className = `img-container${number}`;
 
                 // Ordem das divs imgDiv e infoDiv
                 itemDiv.appendChild(imgDiv);
                 itemDiv.appendChild(infoDiv);
                 
                 // Adicionar o ID "post" ao itemDiv
-                itemDiv.id = "post";
+                itemDiv.className = `post${number}`;
             
                 return itemDiv;
             };
@@ -81,11 +81,23 @@ request.onreadystatechange = () => {
         
             part2.forEach(item => {
                 const itemDiv = createItemElement(item, 2);
+                const shareLink = document.createElement('a');
+                shareLink.href = item.url;
+                const shareElement = document.createElement('img');
+                shareElement.src = '/assets/media/share-icon-black.png';
+                shareLink.appendChild(shareElement);
+                itemDiv.appendChild(shareLink);
                 part2Container.appendChild(itemDiv);
             });
         
             part3.forEach(item => {
                 const itemDiv = createItemElement(item, 3);
+                const shareLink = document.createElement('a');
+                shareLink.href = item.url;
+                const shareElement = document.createElement('img');
+                shareElement.src = '/assets/media/share-icon-black.png';
+                shareLink.appendChild(shareElement);
+                itemDiv.appendChild(shareLink);
                 part3Container.appendChild(itemDiv);
             });
         
@@ -105,19 +117,27 @@ request.onreadystatechange = () => {
                 const descriptionElement = document.createElement('p');
                 const imageElement = document.createElement('img');
                 const labelElement = document.createElement('p');
+                const shareLink = document.createElement('a');
+                const shareElement = document.createElement('img');
 
                 // Preencher os elementos HTML com os dados do item
-                titleElement.innerHTML = `<a href="${item.url}">${item.title}</a>`;
+                titleElement.innerHTML = item.title;
                 descriptionElement.textContent = item.description;
                 imageElement.src = '/assets/media/' + item.image;
                 labelElement.textContent = item.label;
+                shareLink.href = item.url;
+                shareElement.src = '/assets/media/share-icon-black.png';
 
                 // Adicionar os elementos ao HTML
                 itemDiv.appendChild(imageElement);
                 itemDiv.appendChild(labelElement);
                 itemDiv.appendChild(titleElement);
                 itemDiv.appendChild(descriptionElement);
+                shareLink.appendChild(shareElement);
+                itemDiv.appendChild(shareLink);
                 brasilSectionContainer.appendChild(itemDiv);
+
+                itemDiv.className = 'post-brasil';
               });
           } else if (section.name === "Mundo") {
             const mundoSectionData = section.data.slice(0, 4);
@@ -130,19 +150,27 @@ request.onreadystatechange = () => {
                 const descriptionElement = document.createElement('p');
                 const imageElement = document.createElement('img');
                 const labelElement = document.createElement('p');
+                const shareLink = document.createElement('a');
+                const shareElement = document.createElement('img');
 
                 // Preencher os elementos HTML com os dados do item
                 titleElement.innerHTML = `<a href="${item.url}">${item.title}</a>`;
                 descriptionElement.textContent = item.description;
                 imageElement.src = '/assets/media/' + item.image;
                 labelElement.textContent = item.label;
+                shareLink.href = item.url;
+                shareElement.src = '/assets/media/share-icon-black.png';
 
                 // Adicionar os elementos ao HTML
                 itemDiv.appendChild(imageElement);
                 itemDiv.appendChild(labelElement);
                 itemDiv.appendChild(titleElement);
                 itemDiv.appendChild(descriptionElement);
+                shareLink.appendChild(shareElement);
+                itemDiv.appendChild(shareLink);
                 mundoSectionContainer.appendChild(itemDiv);
+
+                itemDiv.className = 'post-mundo';
               });
           }
       });
