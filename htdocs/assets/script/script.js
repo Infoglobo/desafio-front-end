@@ -59,11 +59,13 @@ request.onreadystatechange = () => {
         
             // Criar as <div>s para cada parte
             const part1Container = document.createElement('div');
+            const line = document.createElement('div');
             const part2Container = document.createElement('div');
             const part3Container = document.createElement('div');
         
             // Adicionar as classes CSS para cada <div>
             part1Container.classList.add('part1');
+            line.classList.add('line');
             part2Container.classList.add('part2');
             part3Container.classList.add('part3');
         
